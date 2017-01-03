@@ -1,5 +1,9 @@
+* { /*Para que se cumpla en todos los elementos de la web - Se recomiendo ponerla siempre*/
+    box-sizing: border-box; /*Para que el border y el padding cuenten para el contenido de la caja*/
+}
+
 body{
-	margin:0px;
+	margin:0;
 	font-family: 'roboto', sans-serif;
 }
 
@@ -17,7 +21,7 @@ body{
 
 .navbar > .navbar-list{
 	list-style-type: none;
-	margin: 0px;
+	margin: 0;
 	float: right;
 	font-size: 0; /*para eliminar el espacio entre los botones del menú, pero ahora nos quedamos sin letra*/
 }
@@ -71,31 +75,54 @@ body{
 	text-align: center;
 	font-family: batman;
 	font-size: 28px;
-
-
 }
 
 .about-me > .batman-video{
 	max-width: 50%;
 	float: left;
-
 }
 
 .about-me > .batman-info{
 	max-width: 50%;
 	float: right;
-
 }
 
-.team-member-photo img{
+.team-member-photo img{ /* que tengan dentro una imagen img*/
 	height: 300px;
-	max-width: : 100%;
+	max-width: 100%;
 	border-radius: 50%;
 }
 
 .section-content{ /*para que nuestros div respiren*/
 	padding-top: 50px;
 	padding-bottom: 50px; 
+}
+
+.section-content-reverse{
+	background-color: rgba(0, 0, 0, 0.92);
+    color: white;
+    margin-left: calc(-50vw + 50%); /*Para saltarnos la limitación del maxwidth 1200 que hemos puesto en el body*/
+    margin-right: calc(-50vw + 50%);
+}
+
+.row-flex{
+	display: flex;
+    flex-flow: nowrap;
+
+}
+
+.transport-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow:1; /*es como llamar a flex (abreviación flex grow)*/
+}
+
+.transport-img{
+    max-width: 100%;
+    height: 250px;
+    border-radius:50%;
 }
 
 /*Al poner el posicionamiento absoluto me ha tapado el título*/

@@ -14,73 +14,73 @@
 }
 
 .col-1{
-	width: 8.333333333%;
+	width: calc(100% / 12);
 	float: left;
 	display: inline-block; /*Para que todos sean siempre en linia e inline-block para que respete los margenes por arriba y abajo */
 }
 
 .col-2{
-	width: 16.66666667%;
+	width: calc(calc(100% / 12)*2);
 	float: left;
 	display: inline-block;
 }
 
 .col-3{
-	width: 25%;
+	width: calc(calc(100% / 12)*3);
 	float: left;
 	display: inline-block;
 }
 
 .col-4{
-	width: 33.333333333%;
+	width: calc(calc(100% / 12)*4);
 	float: left;
 	display: inline-block;
 }
 
 .col-5{
-	width: 41.666666667%;
+	width: calc(calc(100% / 12)*5);
 	float: left;
 	display: inline-block;
 }
 
 .col-6{
-	width: 50%;
+	width: calc(calc(100% / 12)*6);
 	float: left;
 	display: inline-block;
 }
 
 .col-7{
-	width: 58.333333333%;
+	width: calc(calc(100% / 12)*7);
 	float: left;
 	display: inline-block;
 }
 
 .col-8{
-	width: 66.6666666667%;
+	width: calc(calc(100% / 12)*8);
 	float: left;
 	display: inline-block;
 }
 
 .col-9{
-	width: 75%;
+	width: calc(calc(100% / 12)*9);
 	float: left;	
 	display: inline-block;
 }
 
 .col-10{
-	width: 83.33333333%;
+	width: calc(calc(100% / 12)*10);
 	float: left;
 	display: inline-block;
 }
 
 .col-11{
-	width: 91.66666667%;
+	width: calc(calc(100% / 12)*11);
 	float: left;
 	display: inline-block;
 }
 
 .col-12{
-	width: 100%;
+	width: calc(calc(100% / 12)*12);
 	float: left;
 	display: inline-block;
 }

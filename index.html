@@ -42,7 +42,7 @@
 			</ul>
 		</nav>
 
-		<main class="container">
+		<main class="container"><!--Para que toda la web esté dentro del contenedor-->
 			<section id="quien-soy" class="about-me clearfix section-content">
 				<div class="batman-video">
 					VIDEO
@@ -59,8 +59,8 @@
 				</div>
 			</section>
 
-			<section id="equipo" class="team">  
-				<div class="row section-content"><!--Separamos clases visuales de estructura-->
+			<section id="equipo" class="team section-content-reverse">
+				<div class="row section-content container"><!--Separamos clases visuales de estructura y le ponemos el container para que no se salga de la sección al poner el fondo de punta a punta-->
 					<div class="col-4">
 						<article>
 							<header>
@@ -125,21 +125,37 @@
 
 			</section>
 
-			<section id="transporte">
+			<section id="transporte" class="transport section-content"> <!--section-content es la que usamos para meter los padding-->
+				<div class="row-flex">
+					<article class="transport-item">
+						<figure>
+							<img class="transport-img" src="images/car.jpg" alt="Coche Batman">
+							<figcaption>
+								<small>Coche Batman</small>
+							</figcaption>
+						</figure>
+						<p class="transport-info">
+							Fabricado en el año <time datetime="2005">2005</time> y se uso durante toda la trilogía.
+						</p>
+					</article>
 
-				<article>
-					
-				</article>
-				
-				<article>
-					
-				</article>
+					<article class="transport-item">
+						<figure>
+							<img class="transport-img" src="images/moto.jpg" alt="Moto Batman">
+							<figcaption>
+								<small>Moto Batman</small>
+							</figcaption>
+						</figure>
+						<p class="transport-info">
+							Fabricado en el año <time datetime="2005">2005</time> y se uso durante toda la trilogía.
+						</p>
+					</article>
+				</div>
 			</section>
-
 		</main>
 
 		<footer>
-			Carlos Mencia &copy	2016 
+			Carlos Mencia &copy; 2016
 		</footer>
 
 	</body>
