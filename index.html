@@ -1,177 +1,181 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<title>Batman</title>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="style/style.css">
-		<link rel="stylesheet" type="text/css" href="style/grid.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-	</head>
+<head>
+	<title>Batman</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/grid.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<script src="js/modernizr-custom.js"></script>
+</head>
 
-	<body>
+<body>
+<header class="header">
+	<h1 class="title">Batman</h1>
+	<!-- <img src="images/batman.jpg" class="title-img"> -->
+	<div id="title-img-animation" class="title-img"></div>
+	<p class="title-cite">“Él puede tomar la decisión que nadie más puede, la decisión correcta”</p>
+</header>
 
-		<header class="header"> <!--Siempre va al principio-->
-				<h1 class="title">Batman</h1>
-				<!--<img src="images/batman.jpg" class="title-img">-->
-				<div class="tittle-img"></div>
-				<p class="tittle-cite">"Él puede tomar la decisión que nadie más puede, la decisión correcta"</p>
-		</header>
-		
-		<nav class="navbar">
-			<ul class="navbar-list">
-				<li class="navbar-item active">
-					<a href="#" class="navbar-link">Inicio</a> <!--Apunta a dentro de nuestra pag y solo almohadilla pq es  la home-->
-				</li>				
-				<li class="navbar-item">
-					<a href="#quien-soy" class="navbar-link">Quien soy</a>
-				</li>				
-				<li class="navbar-item">
-					<a href="#equipo" class="navbar-link">Equipo</a>
-				</li>				
-				<li class="navbar-item">
-					<a href="#transporte" class="navbar-link">Transporte</a>
-				</li>				
-				<li class="navbar-item">
-					<a href="contact.html" class="navbar-link">Contacto</a>
-				</li>				
-				<li class="navbar-item">
-					<a href="tasks.html" class="navbar-link">Tareas</a>
-				</li>				
+<nav class="navbar">
+	<ul class="navbar-list">
+		<li class="navbar-item active">
+			<a href="#" class="navbar-link">Inicio</a>
+		</li>
+		<li class="navbar-item">
+			<a href="#quien-soy" class="navbar-link">Quien soy</a>
+		</li>
+		<li class="navbar-item">
+			<a href="#equipo" class="navbar-link">Equipo</a>
+		</li>
+		<li class="navbar-item">
+			<a href="#transporte" class="navbar-link">Transporte</a>
+		</li>
+		<li class="navbar-item">
+			<a href="contact.html" class="navbar-link">Contacto</a>
+		</li>
+		<li class="navbar-item">
+			<a href="tasks.html" class="navbar-link">Tareas</a>
+		</li>
+	</ul>
+</nav>
 
-			</ul>
-		</nav>
-
-		<main class="container"><!--Para que toda la web esté dentro del contenedor-->
-			<section id="quien-soy" class="about-me clearfix section-content">
-				<div class="batman-video">
-					VIDEO
-				</div>
-				<div class="batman-info">
-					<h2>Quien soy</h2>
-					<strong>Batman</strong>
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+<main class="container">
+	<section id="quien-soy" class="about-me clearfix section-content">
+		<div class="batman-video">
+			<video id="video-batman" width="550" height="300" controls>
+				<source src="video/batman-lego.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="batman-info">
+			<h2>Quien soy</h2>
+			<strong>Batman:</strong>
+			<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-				</div>
-			</section>
+		</div>
+	</section>
 
-			<section id="equipo" class="team section-content-reverse">
-				<div class="row section-content container"><!--Separamos clases visuales de estructura y le ponemos el container para que no se salga de la sección al poner el fondo de punta a punta-->
-					<div class="col-4">
-						<article>
-							<header>
-								<h3>Alfred Pennyworth
-									(<span class="real-name">Michael Caine</span>)	
-								</h3>
-								<h4 class="position">Mayordomo</h4>
-							</header>
-							<figure class="team-member-photo">
-								<img src="images/alfred.jpg" alt="Foto del Alfred">
-								<figcaption class="photo-name">
-									<small>Alfred Pennyworth</small>
-								</figcaption>
-							</figure>
-							<p class="bio">
-								"¿Por qué caemos, señor? Para que aprendamos a levantarnos" - 
-								<cite>Batman Begins</cite>
-							</p>
-						</article>
-					</div>
-					<div class="col-4">
-						<article>
-							<header>
-								<h3>Harvey Dent
-									(<span class="real-name">Aaron Eckhart</span>)	
-								</h3>
-								<h4 class="position">Fiscal del distrito</h4>
-							</header>
-							<figure class="team-member-photo">
-								<img src="images/alfred.jpg" alt="Foto del Alfred">
-								<figcaption class="photo-name">
-									<small>Harvey Ben</small>
-								</figcaption>
-							</figure>
-							<p class="bio">
-								"O mueres como un heroe, o vives lo suficiente como para convertirte en el villano" - 
-								<cite>Batman El Caballero Oscuro</cite>
-							</p>
-						</article>
-					</div>
-					<div class="col-4">
-						<article>
-							<header>
-								<h3>James Gordon
-									(<span class="real-name">Gary Oldman</span>)	
-								</h3>
-								<h4 class="position">Policia</h4>
-							</header>
-							<figure class="team-member-photo">
-								<img src="images/gordon.jpg" alt="Foto del Gordon">
-								<figcaption class="photo-name">
-									<small>James Gordon</small>
-								</figcaption>
-							</figure>
-							<p class="bio">
-								"Él es el héroe de Gptham merece, pero no el que necesita en este momento" - 
-								<cite>Batman El Caballero Oscuro</cite>
-							</p>
-						</article>
-				</div>
-				</div>
+	<section id="equipo" class="team section-content-reverse">
+		<div class="row section-content container">
+			<div class="col-4">
+				<article>
+					<header>
+						<h3>Alfred Pennyworth
+							(<span class="real-name">Michael Caine</span>)
+						</h3>
+						<h4 class="position">Mayordomo</h4>
+					</header>
+					<figure class="team-member-photo">
+						<img src="images/alfred.jpg" alt="Foto de Alfred">
+						<figcaption class="photo-name">
+							<small>Alfred Pennyworth</small>
+						</figcaption>
+					</figure>
+					<p class="bio">
+						“¿Por qué caemos, señor? Para que aprendamos a levantarnos” -
+						<cite>Batman Begins</cite>
+					</p>
+				</article>
+			</div>
 
-			</section>
+			<div class="col-4">
+				<article>
+					<header>
+						<h3>
+							Harvey Dent
+							(<span class="real-name">Aaron Eckhart</span>)
+						</h3>
+						<h4 class="position">Fiscal del distrito</h4>
+					</header>
+					<figure class="team-member-photo">
+						<div class="flip">
+							<div class="front">
+								<img src="images/harvey.jpg" alt="Foto de Harvey">
+							</div>
 
-			<section id="transporte" class="transport section-content"> <!--section-content es la que usamos para meter los padding-->
-				<div class="row-flex">
-					<article class="transport-item">
-						<figure>
-							<img class="transport-img" src="images/car.jpg" alt="Coche Batman">
-							<figcaption>
-								<small>Coche Batman</small>
-							</figcaption>
-						</figure>
-						<p class="transport-info">
-							Fabricado en el año <time datetime="2005">2005</time> y se uso durante toda la trilogía.
-						</p>
-					</article>
+							<div class="back">
+								<img src="images/harvey-two-face.jpg" alt="Foto de Harvey dos caras">
+							</div>
+						</div>
+						<figcaption class="photo-name">
+							<small>Harvey Dent</small>
+						</figcaption>
+					</figure>
+					<p class="bio">
+						“O mueres como un héroe, o vives lo suficiente como para convertirte en el villano” -
+						<cite>Batman El Caballero Oscuro</cite>
+					</p>
+				</article>
+			</div>
 
-					<article class="transport-item">
-						<figure>
-							<img class="transport-img" src="images/moto.jpg" alt="Moto Batman">
-							<figcaption>
-								<small>Moto Batman</small>
-							</figcaption>
-						</figure>
-						<p class="transport-info">
-							Fabricado en el año <time datetime="2005">2005</time> y se uso durante toda la trilogía.
-						</p>
-					</article>
-				</div>
-			</section>
-		</main>
+			<div class="col-4">
+				<article>
+					<header>
+						<h3>
+							James Gordon
+							(<span class="real-name">Gary Oldman</span>)
+						</h3>
+						<h4 class="position">Policía</h4>
+					</header>
+					<figure class="team-member-photo">
+						<img src="images/gordon.jpg" alt="Foto de Alfred">
+						<figcaption class="photo-name">
+							<small>James Gordon</small>
+						</figcaption>
+					</figure>
+					<p class="bio">
+						“Él es el héroe que Gotham merece, pero no el que necesita en este momento” -
+						<cite>Batman El Caballero Oscuro</cite>
+					</p>
+				</article>
+			</div>
+		</div>
+	</section>
 
-		<footer>
-			Carlos Mencia &copy; 2016
-		</footer>
+	<section id="transporte" class="trasnport section-content">
+		<div class="row-flex">
+			<article class="transport-item">
+				<figure>
+					<img class="transport-img" src="images/car.jpg" alt="Coche Batman"></img>
+					<figcaption>
+						<small>Coche Batman</small>
+					</figcaption>
+				</figure>
+				<p class="transport-info">
+					Fabricado en el año <time datetime="2005">2005</time> y se uso durante toda la trilogía.
+				</p>
+			</article>
 
-	</body>
+			<article class="transport-item">
+				<figure>
+					<img class="transport-img" src="images/moto.jpg" alt="Moto Batman"></img>
+					<figcaption>
+						<small>Moto Batman</small>
+					</figcaption>
+				</figure>
+				<p class="transport-info">
+					Fabricado en el año <time datetime="2005">2005</time> y se uso durante toda la trilogía.
+				</p>
+			</article>
+		</div>
+	</section>
+</main>
+
+<footer class="footer">
+	Sergio Fernández &copy; 2016 KeepCoding.io
+</footer>
+</body>
+
+<script src="js/animationImgTitle.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/full-screen.js"></script>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
