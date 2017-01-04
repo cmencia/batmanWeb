@@ -36,6 +36,7 @@ body{
 	text-decoration: none; /*para que no esté subrallado*/
 	padding: 20px;
 	color: rgba(0,0,0,0.92);
+    transition: all 0.5s;
 }
 
 .navbar > .navbar-list > .navbar-item.active > .navbar-link { /*para que cuando esté activo se me marque el color por def*/
@@ -48,33 +49,45 @@ body{
     background-color: #A4A4A4;
 }
 
-.header > .title{
-	position: absolute;
-	top: 65%;
-	width: 100%;
-	color: white;
-	text-align: center;
-	font-size: 100px;
-	font-family: batman;
+.header > .title {
+    position: absolute;
+    top: 65%;
+    width: 100%;
+    color: white;
+    font-family: batman;
+    text-align: center;
+    font-size: 100px;
+    visibility: hidden;
+    animation: titleAnimation 2s forwards;
+    animation-delay: 0.5s;
+
 }
 
-.header > .tittle-img{
-	width: 100%;
-	background-image: url(../images/batman.jpg);
-	height: 100vh;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-position: center center;
+.header > .title-img {
+    width: 100%;
+    background-image: url("../images/batman.jpg");
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 0.5s;
 }
 
-.header > .tittle-cite{
-	position: absolute;
-	top: 60%;
-	color: white;
-	width: 100%;
-	text-align: center;
-	font-family: batman;
-	font-size: 28px;
+.header > .title-img:hover {
+    background-size: 115% 115%;
+}
+
+.header > .title-cite {
+    position: absolute;
+    top: 60%;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-family: batman;
+    font-size: 28px;
+    opacity: 0;
+    animation: subtitleAnimation 3s forwards;
+    animation-delay: 0.8s;
 }
 
 .about-me > .batman-video{
@@ -123,6 +136,108 @@ body{
     max-width: 100%;
     height: 250px;
     border-radius:50%;
+}
+
+.footer{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.92);
+    height: 50px;
+    color: #F7F7F7;
+    display: flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip {
+    height: 305px;
+    position: relative;
+    text-align: center;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 1s;
+}
+
+.back {
+    transform: rotateY(-180deg);
+}
+
+.flip:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.flip:hover .back {
+    transform: rotateY(0);
+}
+
+@keyframes titleAnimation {
+    0% {
+        font-size: 200px;
+    }
+    50% {
+        font-size: 180px;
+    }
+    100% {
+        font-size: 100px;
+        visibility: visible;
+    }
+
+}
+
+@keyframes subtitleAnimation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.form {
+    padding: 0 20px;
+}
+
+.form .form-row {
+    padding: 10px;
+}
+
+input {
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=button], input[type=submit], input[type=reset], button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+#too-many-enemies {
+    display: none;
+}
+
+#googleMap {
+    height: 400px;
+}
+
+.container {
+    min-height: 100%;
+    margin-bottom: -50px;
 }
 
 /*Al poner el posicionamiento absoluto me ha tapado el título*/
