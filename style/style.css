@@ -2,9 +2,14 @@
     box-sizing: border-box; /*Para que el border y el padding cuenten para el contenido de la caja*/
 }
 
+html{
+    height: 100%;
+}
+
 body{
 	margin:0;
 	font-family: 'roboto', sans-serif;
+    height:100%; /*Para que el footer nos quede siempre al final*/
 }
 
 @font-face{
@@ -226,17 +231,21 @@ input[type=button], input[type=submit], input[type=reset], button {
     border-radius: 0px;
 }
 
-#too-many-enemies {
+#too-many-enemies { /* Clase nueva para que por defecto sea no */
     display: none;
 }
 
-#googleMap {
+#googleMap { /*Le damos la altura al mapa*/
     height: 400px;
 }
 
 .container {
     min-height: 100%;
     margin-bottom: -50px;
+}
+
+.error{
+    border: 1px solid red;
 }
 
 /*Al poner el posicionamiento absoluto me ha tapado el título*/

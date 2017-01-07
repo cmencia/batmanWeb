@@ -30,15 +30,20 @@ for (var i = 0; i < apellidosInput.length; i++) { //Para poner un event listener
     });
 }
 
-ejercitoInput.addEventListener("keyup", function(event){
-    if(this.value > 50) {
-        tooManyEnemies.style.display = 'block';
+ejercitoInput.addEventListener("keyup", function(event){ //Cuando levantemos el dedo de la tecla se lanza el evento.
+    if(this.value > 50) { //Si es más que 50
+        tooManyEnemies.style.display = 'block'; //
     } else {
         tooManyEnemies.style.display = 'none';
     }
 });
 
-form.addEventListener("submit", function(event){
+
+//Vamos a validar el formulario
+form.addEventListener("submit", function(event){ //Submit es cada vez que se quiera enviar
+
+//Cogemos todos los inputs que compnen mi html
+
     var inputNombre = document.getElementById("nombre");
     var apellidosRadioInput = {
         "apellidos_si": document.getElementById("apellidos_si"),
@@ -61,14 +66,15 @@ form.addEventListener("submit", function(event){
     var fechaInput = document.getElementById("fecha");
     var submitInput = document.getElementById("enviar");
 
-    if(inputNombre.checkValidity() == false) {
+    if(inputNombre.checkValidity() == false) { //Comprobamos la validez
         alert("Escribe tu nombre");
+        inputNombre.classList.add("error");
         inputNombre.focus();
         event.preventDefault();
         return false;
     }
 
-    if(apellidosRadioInput.apellidos_si.checkValidity() == false) {
+    if(apellidosRadioInput.apellidos_si.checkValidity() == false) { //Con hacer uno de los dos nos vale
         alert("Selecciona si tienes apellidos");
         event.preventDefault();
         return false;
@@ -79,7 +85,7 @@ form.addEventListener("submit", function(event){
             alert("Escribe tus apellidos");
             document.getElementById("apellidos").focus();
             event.preventDefault();
-            return false;
+            return false; //Si no pusieramos el false nos saltarían alarmas de todos los campos que faltan por poner todas las veces. De esta forma saltan de uno en uno
         }
     }
 
@@ -92,11 +98,11 @@ form.addEventListener("submit", function(event){
 
     if(misionesRadioInput.mision1.checkValidity() == false) {
         alert("Introduce el tipo de mision");
-        event.preventDefault();
+        event.preventDefault(); //Prevenimos el comportamiento por defecto. Sin esto envía igual el formulario
         return false;
     }
-
-    if(tooManyEnemies.style.display === 'block') {
+    //=== comprueba valor y tipo, esta siempre es la recomendada
+    if(tooManyEnemies.style.display === 'block') { //Si está en block es que está visible y hay que validarlo
         if(estasSeguroRadioInput.seguro_si.checkValidity() == false){
             alert("Confirmanos que estás seguro");
             event.preventDefault();
