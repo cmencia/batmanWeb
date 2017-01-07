@@ -60,7 +60,6 @@ body{
     visibility: hidden;
     animation: titleAnimation 2s forwards;
     animation-delay: 0.5s;
-
 }
 
 .header > .title-img {
