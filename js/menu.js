@@ -61,7 +61,7 @@ function deleteActiveClass() {
 //Esta función anónima calcula a cuanta distancia está mi elemento de arriba del tot
 var cumulativeOffset = function(element) {
     var top = 0;
-    do { //Hacemos un bucle
+    do { //Hacemos un bucle             // El 0 es para que no pete
         top += element.offsetTop || 0; //Propiedad offset es el desplazamiento que existe desde el que tenemos a su padre (body) y lo sumamos a tod o.
         element = element.offsetParent;
     } while(element);
@@ -70,16 +70,17 @@ var cumulativeOffset = function(element) {
 };
 
 //Variables para saber donde está cada sección
-var offsetQuienSoy = cumulativeOffset(document.getElementById('quien-soy')) - 59;
+var offsetQuienSoy = cumulativeOffset(document.getElementById('quien-soy')) - 59; //Les restamos 59 porque la barra de navegación está en estático y mide 59
 var offsetEquipo = cumulativeOffset(document.getElementById('equipo')) - 59;
 var offsetTransporte = cumulativeOffset(document.getElementById('transporte')) - 59;
 
+//Añadoimos un evento a la ventana - window es el bom
 window.addEventListener('scroll', changeMenuStyle);
 
 function changeMenuStyle(event) {
-    var previous;
+    var previous; //Previous es una variable de control que ponemos para saber si estamos en el mismo sitio y devuelve false para que no ejecute nada. Así no creamos bucles infinitos.
 
-    if (window.pageYOffset >= 0 && window.pageYOffset < offsetQuienSoy) {
+    if (window.pageYOffset >= 0 && window.pageYOffset < offsetQuienSoy) { //Donde estamos en el eje vertical
         if(!previous) {
             previous = 1;
         } else if(previous == 1) {
@@ -103,7 +104,7 @@ function changeMenuStyle(event) {
         deleteActiveClass();
 
         if(Modernizr.classList) {
-            document.querySelector('a[href$="quien-soy"]').parentNode.classList.add("active");
+            document.querySelector('a[href$="quien-soy"]').parentNode.classList.add("active"); //$ es que acaba por. .parentNode nos devuelve el padre
         } else {
             document.querySelector('a[href$="quien-soy"]').parentNode.className += " active";
         }
